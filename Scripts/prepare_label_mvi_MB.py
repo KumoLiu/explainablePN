@@ -4,7 +4,7 @@ from pathlib import Path
 import nibabel as nib
 from ..utils import check_dir, get_items_from_file
 from tqdm import tqdm
-from medlp.data_io.base_dataset.classification_dataset import BasicClassificationDataset
+from strix.data_io.base_dataset.classification_dataset import BasicClassificationDataset
 from monai.data import CacheDataset, PersistentDataset, Dataset
 from monai_ex.transforms import *
 

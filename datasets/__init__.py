@@ -1,4 +1,4 @@
-from medlp.utilities.registry import DatasetRegistry
+from strix.utilities.registry import DatasetRegistry
 
 CLASSIFICATION_DATASETS = DatasetRegistry()
 SEGMENTATION_DATASETS = DatasetRegistry()

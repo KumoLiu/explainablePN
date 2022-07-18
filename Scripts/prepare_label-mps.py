@@ -11,8 +11,8 @@ test_json = Path(r"\\mega\homesall\clwang\Data\jsph_lung\YHBLXA_YXJB\data_crops\
 error_json = Path(r"\\mega\homesall\clwang\Data\jsph_lung\YHBLXA_YXJB\error_dict.json")
 SAVE_PATH = Path(r'\\mega\yliu\Data\pn_cls_data\MPS')
 
-refer_train_path = Path(r"\\mega\yliu\Data\medlp_exp\classification\jsph_mps\resnet50-BCE-BN-sgd-plateau-0622_1914-lr0.1-CTRList\train_files.yml")
-refer_valid_path = Path(r"\\mega\yliu\Data\medlp_exp\classification\jsph_mps\resnet50-BCE-BN-sgd-plateau-0622_1914-lr0.1-CTRList\valid_files.yml")
+refer_train_path = Path(r"\\mega\yliu\Data\strix_exp\classification\jsph_mps\resnet50-BCE-BN-sgd-plateau-0622_1914-lr0.1-CTRList\train_files.yml")
+refer_valid_path = Path(r"\\mega\yliu\Data\strix_exp\classification\jsph_mps\resnet50-BCE-BN-sgd-plateau-0622_1914-lr0.1-CTRList\valid_files.yml")
 
 _FEATURE_KEY = ['lobulation', 'spiculation', 'Relation to bronchus', 'Relation to Vessel']
 FEATURE_KEY = [

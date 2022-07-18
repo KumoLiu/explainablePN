@@ -17,7 +17,7 @@ import matplotlib.cm as mpl_color_map
 from monai.networks.nets.basic_unet import Down
 
 # from monai.networks.nets import DynUNet
-from medlp.models.cnn import DynUNet
+from strix.models.cnn import DynUNet
 from monai_ex.networks.layers import Act, Norm, Conv, Pool
 from blocks.basic_block import TwoConv, UpCat, ResidualUnit, SimpleASPP
 from nets.utils import save_activation

@@ -13,8 +13,8 @@ from sklearn.metrics import classification_report
 from utils import DrawROCList, get_network, check_dir, get_items_from_file
 from metrics import AUC_Confidence_Interval, save_roc_curve_fn
 
-model_path = Path("/homes/yliu/Data/pn_cls_exp/lidc-paper_new-sphericity_prob/1215_2358-raw_hesam_agg-slice_1-lr_0.01-plateau-multi-BCE-sgd-sum-parallel-wooffset-2nd/Models/SBAA/BestModel@42with12.817.pt")
-config_path = model_path.parent.parent.parent/'param.list'
+model_path = Path("/homes/yliu/Data/pn_cls_exp/BestModel.pt")
+config_path = model_path.parent.parent.parent/'param.json'
 configures = get_items_from_file(config_path, format='json')
 
 IMAGE_KEY = 'image'
@@ -30,7 +30,7 @@ preload = 0
 device = torch.device("cuda")
 
 
-test_json = Path("/homes/yliu/Data/pn_cls_data/LIDC-IDRI/all_datalist_int_equals3.json")
+test_json = Path("/homes/yliu/Data/LIDC-IDRI/test_datalist.json")
 dataset_name = configures['dataset_name']
 dimensions = configures['dimensions']
 dataset_type = CLASSIFICATION_DATASETS[f'{dimensions}D'][dataset_name]['FN']

@@ -7,9 +7,9 @@ import torch.nn as nn
 import numpy as np
 
 # from monai.networks.nets import DynUNet
-from medlp.models.cnn import DynUNet
-from medlp.models.cnn.blocks.dynunet_block import UnetBasicBlock, UnetUpBlock
-from medlp.models.cnn.layers.anatomical_gate import AnatomicalAttentionGate as AAG
+from strix.models.cnn import DynUNet
+from strix.models.cnn.blocks.dynunet_block import UnetBasicBlock, UnetUpBlock
+from strix.models.cnn.layers.anatomical_gate import AnatomicalAttentionGate as AAG
 from monai_ex.networks.layers import Act, Norm, Conv, Pool
 from monai.networks.blocks.dynunet_block import get_conv_layer
 from monai.networks.nets.basic_unet import Down

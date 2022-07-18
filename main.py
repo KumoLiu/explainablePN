@@ -3,11 +3,11 @@ from pathlib import Path
 
 from train_v2 import train_core
 from utils import check_dir, get_items_from_file, PathlibEncoder
-from sklearn.model_selection import train_test_split, KFold 
+from sklearn.model_selection import train_test_split 
 from datasets import CLASSIFICATION_DATASETS
 
 @click.command('train')
-@click.option("param-path", type=click.Path(), default=Path.home()/"Code"/"ExPN-Net"/"param.list")
+@click.option("--param-path", type=click.Path(), default=Path.home()/"Code"/"ExPN-Net"/"param.json")
 def train(param_path):
     confs = get_items_from_file(param_path, format='json')
     random_seed = 42
@@ -17,7 +17,7 @@ def train(param_path):
     else:
         save_dir_name = f"{time.strftime('%m%d_%H%M')}-{confs['net']}-lr_{confs['lr']}-{confs['loss_name']}-{confs['optim']}{confs['postfix']}"
     confs['out_dir'] = check_dir(f"/homes/yliu/Data/pn_cls_exp/{confs['dataset_name']}/{save_dir_name}")
-    with open(confs['out_dir']/'param.list', 'w') as f:
+    with open(confs['out_dir']/'param.json', 'w') as f:
         json.dump(confs, f, indent=2, cls=PathlibEncoder)
     
     dataset_type = CLASSIFICATION_DATASETS[f"{confs['dimensions']}D"][confs['dataset_name']]['FN']

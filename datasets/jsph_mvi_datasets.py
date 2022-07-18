@@ -2,7 +2,7 @@ import math
 import numpy as np
 
 from datasets import CLASSIFICATION_DATASETS
-from medlp.data_io.base_dataset.classification_dataset import BasicClassificationDataset
+from strix.data_io.base_dataset.classification_dataset import BasicClassificationDataset
 from monai_ex.data import CacheDataset, PersistentDataset
 from monai_ex.transforms import *
 

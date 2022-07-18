@@ -9,9 +9,9 @@ import matplotlib.pyplot as plt
 from monai.networks.nets.basic_unet import Down
 
 # from monai.networks.nets import DynUNet
-from medlp.models.cnn import DynUNet
+from strix.models.cnn import DynUNet
 from monai_ex.networks.layers import Act, Norm, Conv, Pool
-from medlp.models.cnn.layers.anatomical_gate import AnatomicalAttentionGate as AAG
+from strix.models.cnn.layers.anatomical_gate import AnatomicalAttentionGate as AAG
 from monai.networks.blocks.dynunet_block import get_conv_layer
 from torch.nn.modules.activation import ReLU
 from blocks.basic_block import TwoConv, UpCat, ResidualUnit, SimpleASPP

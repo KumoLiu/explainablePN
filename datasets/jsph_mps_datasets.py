@@ -2,8 +2,8 @@ import math
 import numpy as np
 from datasets import CLASSIFICATION_DATASETS
 from scipy.ndimage import generate_binary_structure, binary_erosion
-from medlp.data_io.base_dataset.classification_dataset import BasicClassificationDataset
-from medlp.configures import config as cfg
+from strix.data_io.base_dataset.classification_dataset import BasicClassificationDataset
+from strix.configures import config as cfg
 
 
 from monai_ex.data import CacheDataset, PersistentDataset
